@@ -16,7 +16,8 @@ class PaymentMethodController extends Controller
 
     public function index()
     {
-        $data['paymentGateways'] = Gateway::automatic()->orderBy('sort_by', 'ASC')->get();
+        $data['paymentGateways'] = Gateway::automatic()->orderBy('sort_by', 'DESC')->get();
+
         return view('admin.payment_methods.list', $data);
     }
 

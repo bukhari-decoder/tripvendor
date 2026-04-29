@@ -1,0 +1,959 @@
+[2026-04-29 10:56:27] local.INFO: EcoCash Status Response {"response":"{\"version\":0,\"paymentAmount\":{\"charginginformation\":{\"amount\":null,\"currency\":null,\"description\":null},\"chargeMetaData\":{\"channel\":null,\"purchaseCategoryCode\":null,\"onBeHalfOf\":null,\"serviceId\":null},\"totalAmountCharged\":0}}"} 
+[2026-04-29 10:56:34] local.INFO: EcoCash Status Response {"response":"{\"version\":0,\"paymentAmount\":{\"charginginformation\":{\"amount\":null,\"currency\":null,\"description\":null},\"chargeMetaData\":{\"channel\":null,\"purchaseCategoryCode\":null,\"onBeHalfOf\":null,\"serviceId\":null},\"totalAmountCharged\":0}}"} 
+[2026-04-29 14:28:06] local.INFO: EcoCash Status Response {"response":"{\"version\":0,\"paymentAmount\":{\"charginginformation\":{\"amount\":null,\"currency\":null,\"description\":null},\"chargeMetaData\":{\"channel\":null,\"purchaseCategoryCode\":null,\"onBeHalfOf\":null,\"serviceId\":null},\"totalAmountCharged\":0}}"} 
+[2026-04-29 14:44:08] local.INFO: EcoCash initiated {"corelator":2501,"response":null} 
+[2026-04-29 14:44:10] local.INFO: EcoCash status response {"corelator":2501,"body":{"version":0,"paymentAmount":{"charginginformation":{"amount":null,"currency":null,"description":null},"chargeMetaData":{"channel":null,"purchaseCategoryCode":null,"onBeHalfOf":null,"serviceId":null},"totalAmountCharged":0}}} 
+[2026-04-29 14:46:06] local.ERROR: syntax error, unexpected token "->" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \"->\" at D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Controllers\\User\\PlanController.php:623)
+[stacktrace]
+#0 D:\\xammp\\htdocs\\tripvendor\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}('D:\\\\xammp\\\\htdocs...')
+#1 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('App\\\\Http\\\\Contro...')
+#2 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(1117): is_a('App\\\\Http\\\\Contro...', 'Illuminate\\\\Rout...', true)
+#3 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(1054): Illuminate\\Routing\\Route->controllerMiddleware()
+#4 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(820): Illuminate\\Routing\\Route->gatherMiddleware()
+#5 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(802): Illuminate\\Routing\\Router->gatherRouteMiddleware(Object(Illuminate\\Routing\\Route))
+#6 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#7 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#8 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#9 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#10 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#11 D:\\xammp\\htdocs\\tripvendor\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#13 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#29 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#30 D:\\xammp\\htdocs\\tripvendor\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#31 {main}
+"} 
+[2026-04-29 14:50:56] local.INFO: EcoCash initiation response {"corelator":9633,"response":"<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10286526582169483548<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>"} 
+[2026-04-29 14:50:58] local.INFO: EcoCash status response {"corelator":9633,"response":"{\"version\":0,\"paymentAmount\":{\"charginginformation\":{\"amount\":null,\"currency\":null,\"description\":null},\"chargeMetaData\":{\"channel\":null,\"purchaseCategoryCode\":null,\"onBeHalfOf\":null,\"serviceId\":null},\"totalAmountCharged\":0}}"} 
+[2026-04-29 14:50:58] local.WARNING: EcoCash not completed {"corelator":9633,"final_status":"FAILED"} 
+[2026-04-29 15:22:18] local.ERROR: Trying to access array offset on value of type null {"view":{"view":"D:\\xammp\\htdocs\\tripvendor\\resources\\views\\admin\\payment_methods\\edit.blade.php","data":{"basicControl":"<pre class=sf-dump id=sf-dump-1077675882 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Models\\BasicControl</span> {<a class=sf-dump-ref>#2204</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"14 characters\">basic_controls</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+  +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+  +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+  +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:86</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>theme</span>\" => \"<span class=sf-dump-str title=\"8 characters\">adventra</span>\"
+    \"<span class=sf-dump-key>home_style</span>\" => \"<span class=sf-dump-str title=\"8 characters\">home_101</span>\"
+    \"<span class=sf-dump-key>package_list_style</span>\" => \"<span class=sf-dump-str title=\"9 characters\">listThree</span>\"
+    \"<span class=sf-dump-key>site_title</span>\" => \"<span class=sf-dump-str title=\"10 characters\">TripVendor</span>\"
+    \"<span class=sf-dump-key>primary_color</span>\" => \"<span class=sf-dump-str title=\"7 characters\">#4d40ca</span>\"
+    \"<span class=sf-dump-key>secondary_color</span>\" => \"<span class=sf-dump-str title=\"7 characters\">#fb5b32</span>\"
+    \"<span class=sf-dump-key>time_zone</span>\" => \"<span class=sf-dump-str title=\"12 characters\">America/Nuuk</span>\"
+    \"<span class=sf-dump-key>base_currency</span>\" => \"<span class=sf-dump-str title=\"3 characters\">USD</span>\"
+    \"<span class=sf-dump-key>currency_symbol</span>\" => \"<span class=sf-dump-str>$</span>\"
+    \"<span class=sf-dump-key>admin_prefix</span>\" => \"<span class=sf-dump-str title=\"5 characters\">admin</span>\"
+    \"<span class=sf-dump-key>is_currency_position</span>\" => \"<span class=sf-dump-str title=\"4 characters\">left</span>\"
+    \"<span class=sf-dump-key>has_space_between_currency_and_amount</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>is_force_ssl</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>is_maintenance_mode</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>paginate</span>\" => <span class=sf-dump-num>5</span>
+    \"<span class=sf-dump-key>user_paginate</span>\" => <span class=sf-dump-num>8</span>
+    \"<span class=sf-dump-key>booking_appointment</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>strong_password</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>registration</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>fraction_number</span>\" => <span class=sf-dump-num>2</span>
+    \"<span class=sf-dump-key>sender_email</span>\" => \"<span class=sf-dump-str title=\"16 characters\">binary@vines.com</span>\"
+    \"<span class=sf-dump-key>sender_email_name</span>\" => \"<span class=sf-dump-str title=\"12 characters\">Binary Vines</span>\"
+    \"<span class=sf-dump-key>email_description</span>\" => \"\"\"
+      <span class=sf-dump-str title=\"42 characters\">Hello [[name]],<span class=\"sf-dump-default sf-dump-ns\">\\r\\n</span></span>
+      <span class=sf-dump-str title=\"42 characters\">&lt;br&gt;&lt;br&gt;&amp;nbsp;[[message]]</span>
+      \"\"\"
+    \"<span class=sf-dump-key>push_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>in_app_notification</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>email_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>email_verification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>sms_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>sms_verification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>tawk_id</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>tawk_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>fb_messenger_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>fb_app_id</span>\" => \"<span class=sf-dump-str title=\"9 characters\">KLSDKF789</span>\"
+    \"<span class=sf-dump-key>fb_page_id</span>\" => \"<span class=sf-dump-str title=\"9 characters\">654646977</span>\"
+    \"<span class=sf-dump-key>manual_recaptcha</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>google_recaptcha</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>manual_recaptcha_admin_login</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>manual_recaptcha_login</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>manual_recaptcha_register</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>google_recaptcha_admin_login</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>google_recaptcha_login</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>google_recaptcha_register</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>measurement_id</span>\" => \"<span class=sf-dump-str title=\"6 characters\">aaaaaa</span>\"
+    \"<span class=sf-dump-key>analytic_status</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>error_log</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>is_active_cron_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>logo</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/CqfTB0pWYIdw4OH9HWMQlDtNJWJ1uH.webp</span>\"
+    \"<span class=sf-dump-key>logo_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>favicon</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/M8WzketjuNevOKxDYzZgPIftl51kmj.webp</span>\"
+    \"<span class=sf-dump-key>favicon_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>admin_logo</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/4Rn24Ba1wCfuu051Uqjq4trRrCy9wC.webp</span>\"
+    \"<span class=sf-dump-key>admin_logo_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>admin_dark_mode_logo</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/hLGtrsSUco0yfRsZ7foxZpLcDCnSoZ.webp</span>\"
+    \"<span class=sf-dump-key>admin_dark_mode_logo_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>currency_layer_access_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>currency_layer_auto_update_at</span>\" => \"<span class=sf-dump-str title=\"11 characters\">everyMinute</span>\"
+    \"<span class=sf-dump-key>currency_layer_auto_update</span>\" => \"<span class=sf-dump-str>0</span>\"
+    \"<span class=sf-dump-key>coin_market_cap_app_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>coin_market_cap_auto_update_at</span>\" => \"<span class=sf-dump-str title=\"11 characters\">everyMinute</span>\"
+    \"<span class=sf-dump-key>coin_market_cap_auto_update</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>automatic_payout_permission</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>automatic_currency_update_permission</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>date_time_format</span>\" => \"<span class=sf-dump-str title=\"5 characters\">d.m.Y</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2025-06-14 18:51:51</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2026-04-28 21:12:17</span>\"
+    \"<span class=sf-dump-key>isKycMandatory</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>free_listing</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>table_view</span>\" => \"<span class=sf-dump-str title=\"9 characters\">scrolling</span>\"
+    \"<span class=sf-dump-key>cookie_status</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>cookie_heading</span>\" => \"<span class=sf-dump-str title=\"15 characters\">We Use Cookies!</span>\"
+    \"<span class=sf-dump-key>cookie_description</span>\" => \"<span class=sf-dump-str title=\"75 characters\">We use cookies to ensure that give you the best experience on your website.</span>\"
+    \"<span class=sf-dump-key>cookie_button</span>\" => \"<span class=sf-dump-str title=\"8 characters\">See more</span>\"
+    \"<span class=sf-dump-key>cookie_button_link</span>\" => \"<span class=sf-dump-str title=\"13 characters\">cookie-policy</span>\"
+    \"<span class=sf-dump-key>cookie_image</span>\" => \"<span class=sf-dump-str title=\"42 characters\">cookie/7q8lpCKuj8uxn2LDyokqsQCoeowHHn.webp</span>\"
+    \"<span class=sf-dump-key>cookie_image_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>payment_collection</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>gemini_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>gemini_model</span>\" => \"<span class=sf-dump-str title=\"16 characters\">gemini-2.0-flash</span>\"
+    \"<span class=sf-dump-key>gemini_max_token</span>\" => <span class=sf-dump-num>100</span>
+    \"<span class=sf-dump-key>gemini_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>open_ai_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>open_ai_model</span>\" => \"<span class=sf-dump-str title=\"13 characters\">gpt-3.5-turbo</span>\"
+    \"<span class=sf-dump-key>open_ai_max_token</span>\" => <span class=sf-dump-num>50</span>
+    \"<span class=sf-dump-key>open_ai_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>ai_feature</span>\" => <span class=sf-dump-num>0</span>
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:86</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>theme</span>\" => \"<span class=sf-dump-str title=\"8 characters\">adventra</span>\"
+    \"<span class=sf-dump-key>home_style</span>\" => \"<span class=sf-dump-str title=\"8 characters\">home_101</span>\"
+    \"<span class=sf-dump-key>package_list_style</span>\" => \"<span class=sf-dump-str title=\"9 characters\">listThree</span>\"
+    \"<span class=sf-dump-key>site_title</span>\" => \"<span class=sf-dump-str title=\"10 characters\">TripVendor</span>\"
+    \"<span class=sf-dump-key>primary_color</span>\" => \"<span class=sf-dump-str title=\"7 characters\">#4d40ca</span>\"
+    \"<span class=sf-dump-key>secondary_color</span>\" => \"<span class=sf-dump-str title=\"7 characters\">#fb5b32</span>\"
+    \"<span class=sf-dump-key>time_zone</span>\" => \"<span class=sf-dump-str title=\"12 characters\">America/Nuuk</span>\"
+    \"<span class=sf-dump-key>base_currency</span>\" => \"<span class=sf-dump-str title=\"3 characters\">USD</span>\"
+    \"<span class=sf-dump-key>currency_symbol</span>\" => \"<span class=sf-dump-str>$</span>\"
+    \"<span class=sf-dump-key>admin_prefix</span>\" => \"<span class=sf-dump-str title=\"5 characters\">admin</span>\"
+    \"<span class=sf-dump-key>is_currency_position</span>\" => \"<span class=sf-dump-str title=\"4 characters\">left</span>\"
+    \"<span class=sf-dump-key>has_space_between_currency_and_amount</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>is_force_ssl</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>is_maintenance_mode</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>paginate</span>\" => <span class=sf-dump-num>5</span>
+    \"<span class=sf-dump-key>user_paginate</span>\" => <span class=sf-dump-num>8</span>
+    \"<span class=sf-dump-key>booking_appointment</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>strong_password</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>registration</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>fraction_number</span>\" => <span class=sf-dump-num>2</span>
+    \"<span class=sf-dump-key>sender_email</span>\" => \"<span class=sf-dump-str title=\"16 characters\">binary@vines.com</span>\"
+    \"<span class=sf-dump-key>sender_email_name</span>\" => \"<span class=sf-dump-str title=\"12 characters\">Binary Vines</span>\"
+    \"<span class=sf-dump-key>email_description</span>\" => \"\"\"
+      <span class=sf-dump-str title=\"42 characters\">Hello [[name]],<span class=\"sf-dump-default sf-dump-ns\">\\r\\n</span></span>
+      <span class=sf-dump-str title=\"42 characters\">&lt;br&gt;&lt;br&gt;&amp;nbsp;[[message]]</span>
+      \"\"\"
+    \"<span class=sf-dump-key>push_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>in_app_notification</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>email_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>email_verification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>sms_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>sms_verification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>tawk_id</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>tawk_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>fb_messenger_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>fb_app_id</span>\" => \"<span class=sf-dump-str title=\"9 characters\">KLSDKF789</span>\"
+    \"<span class=sf-dump-key>fb_page_id</span>\" => \"<span class=sf-dump-str title=\"9 characters\">654646977</span>\"
+    \"<span class=sf-dump-key>manual_recaptcha</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>google_recaptcha</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>manual_recaptcha_admin_login</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>manual_recaptcha_login</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>manual_recaptcha_register</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>google_recaptcha_admin_login</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>google_recaptcha_login</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>google_recaptcha_register</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>measurement_id</span>\" => \"<span class=sf-dump-str title=\"6 characters\">aaaaaa</span>\"
+    \"<span class=sf-dump-key>analytic_status</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>error_log</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>is_active_cron_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>logo</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/CqfTB0pWYIdw4OH9HWMQlDtNJWJ1uH.webp</span>\"
+    \"<span class=sf-dump-key>logo_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>favicon</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/M8WzketjuNevOKxDYzZgPIftl51kmj.webp</span>\"
+    \"<span class=sf-dump-key>favicon_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>admin_logo</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/4Rn24Ba1wCfuu051Uqjq4trRrCy9wC.webp</span>\"
+    \"<span class=sf-dump-key>admin_logo_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>admin_dark_mode_logo</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/hLGtrsSUco0yfRsZ7foxZpLcDCnSoZ.webp</span>\"
+    \"<span class=sf-dump-key>admin_dark_mode_logo_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>currency_layer_access_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>currency_layer_auto_update_at</span>\" => \"<span class=sf-dump-str title=\"11 characters\">everyMinute</span>\"
+    \"<span class=sf-dump-key>currency_layer_auto_update</span>\" => \"<span class=sf-dump-str>0</span>\"
+    \"<span class=sf-dump-key>coin_market_cap_app_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>coin_market_cap_auto_update_at</span>\" => \"<span class=sf-dump-str title=\"11 characters\">everyMinute</span>\"
+    \"<span class=sf-dump-key>coin_market_cap_auto_update</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>automatic_payout_permission</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>automatic_currency_update_permission</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>date_time_format</span>\" => \"<span class=sf-dump-str title=\"5 characters\">d.m.Y</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2025-06-14 18:51:51</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2026-04-28 21:12:17</span>\"
+    \"<span class=sf-dump-key>isKycMandatory</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>free_listing</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>table_view</span>\" => \"<span class=sf-dump-str title=\"9 characters\">scrolling</span>\"
+    \"<span class=sf-dump-key>cookie_status</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>cookie_heading</span>\" => \"<span class=sf-dump-str title=\"15 characters\">We Use Cookies!</span>\"
+    \"<span class=sf-dump-key>cookie_description</span>\" => \"<span class=sf-dump-str title=\"75 characters\">We use cookies to ensure that give you the best experience on your website.</span>\"
+    \"<span class=sf-dump-key>cookie_button</span>\" => \"<span class=sf-dump-str title=\"8 characters\">See more</span>\"
+    \"<span class=sf-dump-key>cookie_button_link</span>\" => \"<span class=sf-dump-str title=\"13 characters\">cookie-policy</span>\"
+    \"<span class=sf-dump-key>cookie_image</span>\" => \"<span class=sf-dump-str title=\"42 characters\">cookie/7q8lpCKuj8uxn2LDyokqsQCoeowHHn.webp</span>\"
+    \"<span class=sf-dump-key>cookie_image_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>payment_collection</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>gemini_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>gemini_model</span>\" => \"<span class=sf-dump-str title=\"16 characters\">gemini-2.0-flash</span>\"
+    \"<span class=sf-dump-key>gemini_max_token</span>\" => <span class=sf-dump-num>100</span>
+    \"<span class=sf-dump-key>gemini_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>open_ai_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>open_ai_model</span>\" => \"<span class=sf-dump-str title=\"13 characters\">gpt-3.5-turbo</span>\"
+    \"<span class=sf-dump-key>open_ai_max_token</span>\" => <span class=sf-dump-num>50</span>
+    \"<span class=sf-dump-key>open_ai_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>ai_feature</span>\" => <span class=sf-dump-num>0</span>
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+  +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1077675882\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","theme":"<pre class=sf-dump id=sf-dump-343661312 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"16 characters\">themes.adventra.</span>\"
+</pre><script>Sfdump(\"sf-dump-343661312\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","themeTrue":"<pre class=sf-dump id=sf-dump-900002347 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"23 characters\">assets/themes/adventra/</span>\"
+</pre><script>Sfdump(\"sf-dump-900002347\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","errors":"<pre class=sf-dump id=sf-dump-1753388947 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#2172</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>default</span>\" => <span class=\"sf-dump-note sf-dump-ellipsization\" title=\"Illuminate\\Support\\MessageBag
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Support</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span><span class=\"sf-dump-ellipsis-tail\">MessageBag</span></span> {<a class=sf-dump-ref>#2173</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">messages</span>: <span class=sf-dump-note>array:6</span> [ &#8230;6]
+      #<span class=sf-dump-protected title=\"Protected property\">format</span>: \"<span class=sf-dump-str title=\"8 characters\">:message</span>\"
+    </samp>}
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1753388947\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","method":"<pre class=sf-dump id=sf-dump-350800363 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Models\\Gateway</span> {<a class=sf-dump-ref>#2211</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"8 characters\">gateways</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+  +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+  +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+  +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:22</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>999</span>
+    \"<span class=sf-dump-key>code</span>\" => \"<span class=sf-dump-str title=\"7 characters\">ecocash</span>\"
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"7 characters\">Ecocash</span>\"
+    \"<span class=sf-dump-key>sort_by</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>image</span>\" => \"<span class=sf-dump-str title=\"43 characters\">gateway/CbZlenaVX80bjj09HE7TBE2yWwx67D.webp</span>\"
+    \"<span class=sf-dump-key>driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>status</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>parameters</span>\" => \"<span class=sf-dump-str title=\"2 characters\">{}</span>\"
+    \"<span class=sf-dump-key>currencies</span>\" => \"<span class=sf-dump-str title=\"19 characters\">{&quot;0&quot;:{&quot;USD&quot;:&quot;USD&quot;}}</span>\"
+    \"<span class=sf-dump-key>extra_parameters</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>supported_currency</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>receivable_currencies</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>description</span>\" => \"<span class=sf-dump-str title=\"76 characters\">Send form your payment gateway. your bank may charge you a cash advance fee.</span>\"
+    \"<span class=sf-dump-key>currency_type</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>is_sandbox</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>environment</span>\" => \"<span class=sf-dump-str title=\"4 characters\">live</span>\"
+    \"<span class=sf-dump-key>is_manual</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>note</span>\" => \"\"
+    \"<span class=sf-dump-key>is_subscription</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>subscription_on</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2025-06-03 23:50:21</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2025-06-03 23:50:21</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:22</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>999</span>
+    \"<span class=sf-dump-key>code</span>\" => \"<span class=sf-dump-str title=\"7 characters\">ecocash</span>\"
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"7 characters\">Ecocash</span>\"
+    \"<span class=sf-dump-key>sort_by</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>image</span>\" => \"<span class=sf-dump-str title=\"43 characters\">gateway/CbZlenaVX80bjj09HE7TBE2yWwx67D.webp</span>\"
+    \"<span class=sf-dump-key>driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>status</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>parameters</span>\" => \"<span class=sf-dump-str title=\"2 characters\">{}</span>\"
+    \"<span class=sf-dump-key>currencies</span>\" => \"<span class=sf-dump-str title=\"19 characters\">{&quot;0&quot;:{&quot;USD&quot;:&quot;USD&quot;}}</span>\"
+    \"<span class=sf-dump-key>extra_parameters</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>supported_currency</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>receivable_currencies</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>description</span>\" => \"<span class=sf-dump-str title=\"76 characters\">Send form your payment gateway. your bank may charge you a cash advance fee.</span>\"
+    \"<span class=sf-dump-key>currency_type</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>is_sandbox</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>environment</span>\" => \"<span class=sf-dump-str title=\"4 characters\">live</span>\"
+    \"<span class=sf-dump-key>is_manual</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>note</span>\" => \"\"
+    \"<span class=sf-dump-key>is_subscription</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>subscription_on</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2025-06-03 23:50:21</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2025-06-03 23:50:21</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">casts</span>: <span class=sf-dump-note>array:6</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>currency</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+    \"<span class=sf-dump-key>supported_currency</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+    \"<span class=sf-dump-key>receivable_currencies</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+    \"<span class=sf-dump-key>parameters</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+    \"<span class=sf-dump-key>currencies</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+    \"<span class=sf-dump-key>extra_parameters</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+  +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-350800363\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":1,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Trying to access array offset on value of type null at D:\\xammp\\htdocs\\tripvendor\\resources\\views\\admin\\payment_methods\\edit.blade.php:327)
+[stacktrace]
+#0 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(123): require('D:\\\\xammp\\\\htdocs...')
+#1 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#2 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('D:\\\\xammp\\\\htdocs...', Array)
+#3 D:\\xammp\\htdocs\\tripvendor\\vendor\\livewire\\livewire\\src\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\xammp\\\\htdocs...', Array)
+#4 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(75): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('D:\\\\xammp\\\\htdocs...', Array)
+#5 D:\\xammp\\htdocs\\tripvendor\\vendor\\livewire\\livewire\\src\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\xammp\\\\htdocs...', Array)
+#6 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(209): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('D:\\\\xammp\\\\htdocs...', Array)
+#7 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(192): Illuminate\\View\\View->getContents()
+#8 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(161): Illuminate\\View\\View->renderContents()
+#9 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(79): Illuminate\\View\\View->render()
+#10 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#11 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(920): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#12 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(887): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#13 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\Demo.php(23): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\Demo->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\Preview.php(40): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\Preview->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\ActivityByUser.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\ActivityByUser->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\Language.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\Language->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\ValidateRequestData.php(28): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\ValidateRequestData->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(64): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'admin')
+#29 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#35 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#42 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#43 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#44 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#45 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#46 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#47 D:\\xammp\\htdocs\\tripvendor\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#63 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#64 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#65 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#66 D:\\xammp\\htdocs\\tripvendor\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#67 {main}
+
+[previous exception] [object] (ErrorException(code: 0): Trying to access array offset on value of type null at D:\\xammp\\htdocs\\tripvendor\\storage\\framework\\views\\1ed2801ac7edd8fdb32c648fc570be51.php:426)
+[stacktrace]
+#0 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(256): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Trying to acces...', 'D:\\\\xammp\\\\htdocs...', 426)
+#1 D:\\xammp\\htdocs\\tripvendor\\storage\\framework\\views\\1ed2801ac7edd8fdb32c648fc570be51.php(426): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Trying to acces...', 'D:\\\\xammp\\\\htdocs...', 426)
+#2 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(123): require('D:\\\\xammp\\\\htdocs...')
+#3 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('D:\\\\xammp\\\\htdocs...', Array)
+#5 D:\\xammp\\htdocs\\tripvendor\\vendor\\livewire\\livewire\\src\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\xammp\\\\htdocs...', Array)
+#6 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(75): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('D:\\\\xammp\\\\htdocs...', Array)
+#7 D:\\xammp\\htdocs\\tripvendor\\vendor\\livewire\\livewire\\src\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\xammp\\\\htdocs...', Array)
+#8 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(209): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('D:\\\\xammp\\\\htdocs...', Array)
+#9 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(192): Illuminate\\View\\View->getContents()
+#10 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(161): Illuminate\\View\\View->renderContents()
+#11 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(79): Illuminate\\View\\View->render()
+#12 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#13 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(920): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#14 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(887): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#15 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#16 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\Demo.php(23): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\Demo->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\Preview.php(40): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\Preview->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\ActivityByUser.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\ActivityByUser->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\Language.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\Language->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\ValidateRequestData.php(28): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\ValidateRequestData->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(64): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'admin')
+#31 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#37 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#44 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#45 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#46 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#47 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#48 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#49 D:\\xammp\\htdocs\\tripvendor\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#63 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#64 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#65 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#66 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#67 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#68 D:\\xammp\\htdocs\\tripvendor\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#69 {main}
+"} 
+[2026-04-29 15:23:26] local.ERROR: Undefined property: stdClass::$name {"view":{"view":"D:\\xammp\\htdocs\\tripvendor\\resources\\views\\admin\\payment_methods\\edit.blade.php","data":{"basicControl":"<pre class=sf-dump id=sf-dump-1112296150 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Models\\BasicControl</span> {<a class=sf-dump-ref>#2203</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"14 characters\">basic_controls</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+  +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+  +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+  +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:86</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>theme</span>\" => \"<span class=sf-dump-str title=\"8 characters\">adventra</span>\"
+    \"<span class=sf-dump-key>home_style</span>\" => \"<span class=sf-dump-str title=\"8 characters\">home_101</span>\"
+    \"<span class=sf-dump-key>package_list_style</span>\" => \"<span class=sf-dump-str title=\"9 characters\">listThree</span>\"
+    \"<span class=sf-dump-key>site_title</span>\" => \"<span class=sf-dump-str title=\"10 characters\">TripVendor</span>\"
+    \"<span class=sf-dump-key>primary_color</span>\" => \"<span class=sf-dump-str title=\"7 characters\">#4d40ca</span>\"
+    \"<span class=sf-dump-key>secondary_color</span>\" => \"<span class=sf-dump-str title=\"7 characters\">#fb5b32</span>\"
+    \"<span class=sf-dump-key>time_zone</span>\" => \"<span class=sf-dump-str title=\"12 characters\">America/Nuuk</span>\"
+    \"<span class=sf-dump-key>base_currency</span>\" => \"<span class=sf-dump-str title=\"3 characters\">USD</span>\"
+    \"<span class=sf-dump-key>currency_symbol</span>\" => \"<span class=sf-dump-str>$</span>\"
+    \"<span class=sf-dump-key>admin_prefix</span>\" => \"<span class=sf-dump-str title=\"5 characters\">admin</span>\"
+    \"<span class=sf-dump-key>is_currency_position</span>\" => \"<span class=sf-dump-str title=\"4 characters\">left</span>\"
+    \"<span class=sf-dump-key>has_space_between_currency_and_amount</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>is_force_ssl</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>is_maintenance_mode</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>paginate</span>\" => <span class=sf-dump-num>5</span>
+    \"<span class=sf-dump-key>user_paginate</span>\" => <span class=sf-dump-num>8</span>
+    \"<span class=sf-dump-key>booking_appointment</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>strong_password</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>registration</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>fraction_number</span>\" => <span class=sf-dump-num>2</span>
+    \"<span class=sf-dump-key>sender_email</span>\" => \"<span class=sf-dump-str title=\"16 characters\">binary@vines.com</span>\"
+    \"<span class=sf-dump-key>sender_email_name</span>\" => \"<span class=sf-dump-str title=\"12 characters\">Binary Vines</span>\"
+    \"<span class=sf-dump-key>email_description</span>\" => \"\"\"
+      <span class=sf-dump-str title=\"42 characters\">Hello [[name]],<span class=\"sf-dump-default sf-dump-ns\">\\r\\n</span></span>
+      <span class=sf-dump-str title=\"42 characters\">&lt;br&gt;&lt;br&gt;&amp;nbsp;[[message]]</span>
+      \"\"\"
+    \"<span class=sf-dump-key>push_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>in_app_notification</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>email_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>email_verification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>sms_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>sms_verification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>tawk_id</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>tawk_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>fb_messenger_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>fb_app_id</span>\" => \"<span class=sf-dump-str title=\"9 characters\">KLSDKF789</span>\"
+    \"<span class=sf-dump-key>fb_page_id</span>\" => \"<span class=sf-dump-str title=\"9 characters\">654646977</span>\"
+    \"<span class=sf-dump-key>manual_recaptcha</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>google_recaptcha</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>manual_recaptcha_admin_login</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>manual_recaptcha_login</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>manual_recaptcha_register</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>google_recaptcha_admin_login</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>google_recaptcha_login</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>google_recaptcha_register</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>measurement_id</span>\" => \"<span class=sf-dump-str title=\"6 characters\">aaaaaa</span>\"
+    \"<span class=sf-dump-key>analytic_status</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>error_log</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>is_active_cron_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>logo</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/CqfTB0pWYIdw4OH9HWMQlDtNJWJ1uH.webp</span>\"
+    \"<span class=sf-dump-key>logo_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>favicon</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/M8WzketjuNevOKxDYzZgPIftl51kmj.webp</span>\"
+    \"<span class=sf-dump-key>favicon_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>admin_logo</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/4Rn24Ba1wCfuu051Uqjq4trRrCy9wC.webp</span>\"
+    \"<span class=sf-dump-key>admin_logo_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>admin_dark_mode_logo</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/hLGtrsSUco0yfRsZ7foxZpLcDCnSoZ.webp</span>\"
+    \"<span class=sf-dump-key>admin_dark_mode_logo_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>currency_layer_access_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>currency_layer_auto_update_at</span>\" => \"<span class=sf-dump-str title=\"11 characters\">everyMinute</span>\"
+    \"<span class=sf-dump-key>currency_layer_auto_update</span>\" => \"<span class=sf-dump-str>0</span>\"
+    \"<span class=sf-dump-key>coin_market_cap_app_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>coin_market_cap_auto_update_at</span>\" => \"<span class=sf-dump-str title=\"11 characters\">everyMinute</span>\"
+    \"<span class=sf-dump-key>coin_market_cap_auto_update</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>automatic_payout_permission</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>automatic_currency_update_permission</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>date_time_format</span>\" => \"<span class=sf-dump-str title=\"5 characters\">d.m.Y</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2025-06-14 18:51:51</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2026-04-28 21:12:17</span>\"
+    \"<span class=sf-dump-key>isKycMandatory</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>free_listing</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>table_view</span>\" => \"<span class=sf-dump-str title=\"9 characters\">scrolling</span>\"
+    \"<span class=sf-dump-key>cookie_status</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>cookie_heading</span>\" => \"<span class=sf-dump-str title=\"15 characters\">We Use Cookies!</span>\"
+    \"<span class=sf-dump-key>cookie_description</span>\" => \"<span class=sf-dump-str title=\"75 characters\">We use cookies to ensure that give you the best experience on your website.</span>\"
+    \"<span class=sf-dump-key>cookie_button</span>\" => \"<span class=sf-dump-str title=\"8 characters\">See more</span>\"
+    \"<span class=sf-dump-key>cookie_button_link</span>\" => \"<span class=sf-dump-str title=\"13 characters\">cookie-policy</span>\"
+    \"<span class=sf-dump-key>cookie_image</span>\" => \"<span class=sf-dump-str title=\"42 characters\">cookie/7q8lpCKuj8uxn2LDyokqsQCoeowHHn.webp</span>\"
+    \"<span class=sf-dump-key>cookie_image_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>payment_collection</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>gemini_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>gemini_model</span>\" => \"<span class=sf-dump-str title=\"16 characters\">gemini-2.0-flash</span>\"
+    \"<span class=sf-dump-key>gemini_max_token</span>\" => <span class=sf-dump-num>100</span>
+    \"<span class=sf-dump-key>gemini_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>open_ai_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>open_ai_model</span>\" => \"<span class=sf-dump-str title=\"13 characters\">gpt-3.5-turbo</span>\"
+    \"<span class=sf-dump-key>open_ai_max_token</span>\" => <span class=sf-dump-num>50</span>
+    \"<span class=sf-dump-key>open_ai_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>ai_feature</span>\" => <span class=sf-dump-num>0</span>
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:86</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>theme</span>\" => \"<span class=sf-dump-str title=\"8 characters\">adventra</span>\"
+    \"<span class=sf-dump-key>home_style</span>\" => \"<span class=sf-dump-str title=\"8 characters\">home_101</span>\"
+    \"<span class=sf-dump-key>package_list_style</span>\" => \"<span class=sf-dump-str title=\"9 characters\">listThree</span>\"
+    \"<span class=sf-dump-key>site_title</span>\" => \"<span class=sf-dump-str title=\"10 characters\">TripVendor</span>\"
+    \"<span class=sf-dump-key>primary_color</span>\" => \"<span class=sf-dump-str title=\"7 characters\">#4d40ca</span>\"
+    \"<span class=sf-dump-key>secondary_color</span>\" => \"<span class=sf-dump-str title=\"7 characters\">#fb5b32</span>\"
+    \"<span class=sf-dump-key>time_zone</span>\" => \"<span class=sf-dump-str title=\"12 characters\">America/Nuuk</span>\"
+    \"<span class=sf-dump-key>base_currency</span>\" => \"<span class=sf-dump-str title=\"3 characters\">USD</span>\"
+    \"<span class=sf-dump-key>currency_symbol</span>\" => \"<span class=sf-dump-str>$</span>\"
+    \"<span class=sf-dump-key>admin_prefix</span>\" => \"<span class=sf-dump-str title=\"5 characters\">admin</span>\"
+    \"<span class=sf-dump-key>is_currency_position</span>\" => \"<span class=sf-dump-str title=\"4 characters\">left</span>\"
+    \"<span class=sf-dump-key>has_space_between_currency_and_amount</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>is_force_ssl</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>is_maintenance_mode</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>paginate</span>\" => <span class=sf-dump-num>5</span>
+    \"<span class=sf-dump-key>user_paginate</span>\" => <span class=sf-dump-num>8</span>
+    \"<span class=sf-dump-key>booking_appointment</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>strong_password</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>registration</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>fraction_number</span>\" => <span class=sf-dump-num>2</span>
+    \"<span class=sf-dump-key>sender_email</span>\" => \"<span class=sf-dump-str title=\"16 characters\">binary@vines.com</span>\"
+    \"<span class=sf-dump-key>sender_email_name</span>\" => \"<span class=sf-dump-str title=\"12 characters\">Binary Vines</span>\"
+    \"<span class=sf-dump-key>email_description</span>\" => \"\"\"
+      <span class=sf-dump-str title=\"42 characters\">Hello [[name]],<span class=\"sf-dump-default sf-dump-ns\">\\r\\n</span></span>
+      <span class=sf-dump-str title=\"42 characters\">&lt;br&gt;&lt;br&gt;&amp;nbsp;[[message]]</span>
+      \"\"\"
+    \"<span class=sf-dump-key>push_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>in_app_notification</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>email_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>email_verification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>sms_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>sms_verification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>tawk_id</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>tawk_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>fb_messenger_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>fb_app_id</span>\" => \"<span class=sf-dump-str title=\"9 characters\">KLSDKF789</span>\"
+    \"<span class=sf-dump-key>fb_page_id</span>\" => \"<span class=sf-dump-str title=\"9 characters\">654646977</span>\"
+    \"<span class=sf-dump-key>manual_recaptcha</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>google_recaptcha</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>manual_recaptcha_admin_login</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>manual_recaptcha_login</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>manual_recaptcha_register</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>google_recaptcha_admin_login</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>google_recaptcha_login</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>google_recaptcha_register</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>measurement_id</span>\" => \"<span class=sf-dump-str title=\"6 characters\">aaaaaa</span>\"
+    \"<span class=sf-dump-key>analytic_status</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>error_log</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>is_active_cron_notification</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>logo</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/CqfTB0pWYIdw4OH9HWMQlDtNJWJ1uH.webp</span>\"
+    \"<span class=sf-dump-key>logo_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>favicon</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/M8WzketjuNevOKxDYzZgPIftl51kmj.webp</span>\"
+    \"<span class=sf-dump-key>favicon_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>admin_logo</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/4Rn24Ba1wCfuu051Uqjq4trRrCy9wC.webp</span>\"
+    \"<span class=sf-dump-key>admin_logo_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>admin_dark_mode_logo</span>\" => \"<span class=sf-dump-str title=\"40 characters\">logo/hLGtrsSUco0yfRsZ7foxZpLcDCnSoZ.webp</span>\"
+    \"<span class=sf-dump-key>admin_dark_mode_logo_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>currency_layer_access_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>currency_layer_auto_update_at</span>\" => \"<span class=sf-dump-str title=\"11 characters\">everyMinute</span>\"
+    \"<span class=sf-dump-key>currency_layer_auto_update</span>\" => \"<span class=sf-dump-str>0</span>\"
+    \"<span class=sf-dump-key>coin_market_cap_app_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>coin_market_cap_auto_update_at</span>\" => \"<span class=sf-dump-str title=\"11 characters\">everyMinute</span>\"
+    \"<span class=sf-dump-key>coin_market_cap_auto_update</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>automatic_payout_permission</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>automatic_currency_update_permission</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>date_time_format</span>\" => \"<span class=sf-dump-str title=\"5 characters\">d.m.Y</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2025-06-14 18:51:51</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2026-04-28 21:12:17</span>\"
+    \"<span class=sf-dump-key>isKycMandatory</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>free_listing</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>table_view</span>\" => \"<span class=sf-dump-str title=\"9 characters\">scrolling</span>\"
+    \"<span class=sf-dump-key>cookie_status</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>cookie_heading</span>\" => \"<span class=sf-dump-str title=\"15 characters\">We Use Cookies!</span>\"
+    \"<span class=sf-dump-key>cookie_description</span>\" => \"<span class=sf-dump-str title=\"75 characters\">We use cookies to ensure that give you the best experience on your website.</span>\"
+    \"<span class=sf-dump-key>cookie_button</span>\" => \"<span class=sf-dump-str title=\"8 characters\">See more</span>\"
+    \"<span class=sf-dump-key>cookie_button_link</span>\" => \"<span class=sf-dump-str title=\"13 characters\">cookie-policy</span>\"
+    \"<span class=sf-dump-key>cookie_image</span>\" => \"<span class=sf-dump-str title=\"42 characters\">cookie/7q8lpCKuj8uxn2LDyokqsQCoeowHHn.webp</span>\"
+    \"<span class=sf-dump-key>cookie_image_driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>payment_collection</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>gemini_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>gemini_model</span>\" => \"<span class=sf-dump-str title=\"16 characters\">gemini-2.0-flash</span>\"
+    \"<span class=sf-dump-key>gemini_max_token</span>\" => <span class=sf-dump-num>100</span>
+    \"<span class=sf-dump-key>gemini_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>open_ai_key</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>open_ai_model</span>\" => \"<span class=sf-dump-str title=\"13 characters\">gpt-3.5-turbo</span>\"
+    \"<span class=sf-dump-key>open_ai_max_token</span>\" => <span class=sf-dump-num>50</span>
+    \"<span class=sf-dump-key>open_ai_status</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>ai_feature</span>\" => <span class=sf-dump-num>0</span>
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+  +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1112296150\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","theme":"<pre class=sf-dump id=sf-dump-1424120877 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"16 characters\">themes.adventra.</span>\"
+</pre><script>Sfdump(\"sf-dump-1424120877\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","themeTrue":"<pre class=sf-dump id=sf-dump-1214276834 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"23 characters\">assets/themes/adventra/</span>\"
+</pre><script>Sfdump(\"sf-dump-1214276834\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","errors":"<pre class=sf-dump id=sf-dump-1920536550 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#2173</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1920536550\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","method":"<pre class=sf-dump id=sf-dump-498306880 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Models\\Gateway</span> {<a class=sf-dump-ref>#2210</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"8 characters\">gateways</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+  +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+  +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+  +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:22</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>999</span>
+    \"<span class=sf-dump-key>code</span>\" => \"<span class=sf-dump-str title=\"7 characters\">ecocash</span>\"
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"7 characters\">Ecocash</span>\"
+    \"<span class=sf-dump-key>sort_by</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>image</span>\" => \"<span class=sf-dump-str title=\"43 characters\">gateway/CbZlenaVX80bjj09HE7TBE2yWwx67D.webp</span>\"
+    \"<span class=sf-dump-key>driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>status</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>parameters</span>\" => \"<span class=sf-dump-str title=\"2 characters\">{}</span>\"
+    \"<span class=sf-dump-key>currencies</span>\" => \"<span class=sf-dump-str title=\"19 characters\">{&quot;0&quot;:{&quot;USD&quot;:&quot;USD&quot;}}</span>\"
+    \"<span class=sf-dump-key>extra_parameters</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>supported_currency</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>receivable_currencies</span>\" => \"<span class=sf-dump-str title=\"263 characters\">[{&quot;currency&quot;:&quot;USD&quot;,&quot;conversion_rate&quot;:&quot;0.012&quot;,&quot;min_limit&quot;:&quot;0.001&quot;,&quot;max_limit&quot;:&quot;100000&quot;,&quot;percentage_charge&quot;:&quot;0&quot;,&quot;fixed_charge&quot;:&quot;0.5&quot;},{&quot;currency&quot;:&quot;EUR&quot;,&quot;conversion_rate&quot;:&quot;0.010&quot;,&quot;min_limit&quot;:&quot;0.001&quot;,&quot;max_limit&quot;:&quot;100000&quot;,&quot;percentage_charge&quot;:&quot;0&quot;,&quot;fixed_charge&quot;:&quot;0.5&quot;}]</span>\"
+    \"<span class=sf-dump-key>description</span>\" => \"<span class=sf-dump-str title=\"76 characters\">Send form your payment gateway. your bank may charge you a cash advance fee.</span>\"
+    \"<span class=sf-dump-key>currency_type</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>is_sandbox</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>environment</span>\" => \"<span class=sf-dump-str title=\"4 characters\">live</span>\"
+    \"<span class=sf-dump-key>is_manual</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>note</span>\" => \"\"
+    \"<span class=sf-dump-key>is_subscription</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>subscription_on</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2025-06-03 23:50:21</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2025-06-03 23:50:21</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:22</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>999</span>
+    \"<span class=sf-dump-key>code</span>\" => \"<span class=sf-dump-str title=\"7 characters\">ecocash</span>\"
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"7 characters\">Ecocash</span>\"
+    \"<span class=sf-dump-key>sort_by</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>image</span>\" => \"<span class=sf-dump-str title=\"43 characters\">gateway/CbZlenaVX80bjj09HE7TBE2yWwx67D.webp</span>\"
+    \"<span class=sf-dump-key>driver</span>\" => \"<span class=sf-dump-str title=\"5 characters\">local</span>\"
+    \"<span class=sf-dump-key>status</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>parameters</span>\" => \"<span class=sf-dump-str title=\"2 characters\">{}</span>\"
+    \"<span class=sf-dump-key>currencies</span>\" => \"<span class=sf-dump-str title=\"19 characters\">{&quot;0&quot;:{&quot;USD&quot;:&quot;USD&quot;}}</span>\"
+    \"<span class=sf-dump-key>extra_parameters</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>supported_currency</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>receivable_currencies</span>\" => \"<span class=sf-dump-str title=\"263 characters\">[{&quot;currency&quot;:&quot;USD&quot;,&quot;conversion_rate&quot;:&quot;0.012&quot;,&quot;min_limit&quot;:&quot;0.001&quot;,&quot;max_limit&quot;:&quot;100000&quot;,&quot;percentage_charge&quot;:&quot;0&quot;,&quot;fixed_charge&quot;:&quot;0.5&quot;},{&quot;currency&quot;:&quot;EUR&quot;,&quot;conversion_rate&quot;:&quot;0.010&quot;,&quot;min_limit&quot;:&quot;0.001&quot;,&quot;max_limit&quot;:&quot;100000&quot;,&quot;percentage_charge&quot;:&quot;0&quot;,&quot;fixed_charge&quot;:&quot;0.5&quot;}]</span>\"
+    \"<span class=sf-dump-key>description</span>\" => \"<span class=sf-dump-str title=\"76 characters\">Send form your payment gateway. your bank may charge you a cash advance fee.</span>\"
+    \"<span class=sf-dump-key>currency_type</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>is_sandbox</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>environment</span>\" => \"<span class=sf-dump-str title=\"4 characters\">live</span>\"
+    \"<span class=sf-dump-key>is_manual</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>note</span>\" => \"\"
+    \"<span class=sf-dump-key>is_subscription</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>subscription_on</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2025-06-03 23:50:21</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2025-06-03 23:50:21</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">casts</span>: <span class=sf-dump-note>array:6</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>currency</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+    \"<span class=sf-dump-key>supported_currency</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+    \"<span class=sf-dump-key>receivable_currencies</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+    \"<span class=sf-dump-key>parameters</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+    \"<span class=sf-dump-key>currencies</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+    \"<span class=sf-dump-key>extra_parameters</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+  +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-498306880\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":1,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Undefined property: stdClass::$name at D:\\xammp\\htdocs\\tripvendor\\resources\\views\\admin\\payment_methods\\edit.blade.php:302)
+[stacktrace]
+#0 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(123): require('D:\\\\xammp\\\\htdocs...')
+#1 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#2 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('D:\\\\xammp\\\\htdocs...', Array)
+#3 D:\\xammp\\htdocs\\tripvendor\\vendor\\livewire\\livewire\\src\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\xammp\\\\htdocs...', Array)
+#4 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(75): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('D:\\\\xammp\\\\htdocs...', Array)
+#5 D:\\xammp\\htdocs\\tripvendor\\vendor\\livewire\\livewire\\src\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\xammp\\\\htdocs...', Array)
+#6 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(209): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('D:\\\\xammp\\\\htdocs...', Array)
+#7 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(192): Illuminate\\View\\View->getContents()
+#8 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(161): Illuminate\\View\\View->renderContents()
+#9 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(79): Illuminate\\View\\View->render()
+#10 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#11 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(920): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#12 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(887): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#13 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\Demo.php(23): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\Demo->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\Preview.php(40): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\Preview->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\ActivityByUser.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\ActivityByUser->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\Language.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\Language->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\ValidateRequestData.php(28): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\ValidateRequestData->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(64): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'admin')
+#29 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#35 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#42 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#43 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#44 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#45 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#46 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#47 D:\\xammp\\htdocs\\tripvendor\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#63 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#64 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#65 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#66 D:\\xammp\\htdocs\\tripvendor\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#67 {main}
+
+[previous exception] [object] (ErrorException(code: 0): Undefined property: stdClass::$name at D:\\xammp\\htdocs\\tripvendor\\storage\\framework\\views\\1ed2801ac7edd8fdb32c648fc570be51.php:387)
+[stacktrace]
+#0 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(256): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Undefined prope...', 'D:\\\\xammp\\\\htdocs...', 387)
+#1 D:\\xammp\\htdocs\\tripvendor\\storage\\framework\\views\\1ed2801ac7edd8fdb32c648fc570be51.php(387): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Undefined prope...', 'D:\\\\xammp\\\\htdocs...', 387)
+#2 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(123): require('D:\\\\xammp\\\\htdocs...')
+#3 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('D:\\\\xammp\\\\htdocs...', Array)
+#5 D:\\xammp\\htdocs\\tripvendor\\vendor\\livewire\\livewire\\src\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\xammp\\\\htdocs...', Array)
+#6 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(75): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('D:\\\\xammp\\\\htdocs...', Array)
+#7 D:\\xammp\\htdocs\\tripvendor\\vendor\\livewire\\livewire\\src\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\xammp\\\\htdocs...', Array)
+#8 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(209): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('D:\\\\xammp\\\\htdocs...', Array)
+#9 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(192): Illuminate\\View\\View->getContents()
+#10 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(161): Illuminate\\View\\View->renderContents()
+#11 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(79): Illuminate\\View\\View->render()
+#12 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#13 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(920): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#14 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(887): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#15 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#16 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\Demo.php(23): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\Demo->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\Preview.php(40): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\Preview->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\ActivityByUser.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\ActivityByUser->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\Language.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\Language->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\xammp\\htdocs\\tripvendor\\app\\Http\\Middleware\\ValidateRequestData.php(28): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): App\\Http\\Middleware\\ValidateRequestData->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(64): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'admin')
+#31 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#37 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#44 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#45 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#46 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#47 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#48 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#49 D:\\xammp\\htdocs\\tripvendor\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#63 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#64 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#65 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#66 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#67 D:\\xammp\\htdocs\\tripvendor\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#68 D:\\xammp\\htdocs\\tripvendor\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#69 {main}
+"} 

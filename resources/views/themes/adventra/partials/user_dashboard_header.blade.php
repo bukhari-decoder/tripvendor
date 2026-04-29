@@ -1,434 +1,537 @@
-<!-- ========== HEADER ========== -->
-<header id="header" class="navbar navbar-expand-lg navbar-bordered navbar-spacer-y-0 flex-lg-column">
-    <div class="navbar-dark w-100 bg-dark py-2">
-        <div class="container">
-            <div class="navbar-nav-wrap">
-                <!-- Logo -->
-                <a class="navbar-brand" href="{{ route('page','/') }}" aria-label="Front">
-                    <img class="navbar-brand-logo"
-                         src="{{ getFile(basicControl()->admin_dark_mode_logo_driver, basicControl()->admin_dark_mode_logo) }}"
-                         alt="Logo">
-                </a>
-                <div class="navbar-nav-wrap-content-start">
-                    <!-- Search Form -->
-                    <div class="d-none d-lg-block">
-                        <div class="dropdown ms-2">
-                            <div class="d-none d-lg-block">
-                                <div
-                                    class="input-group input-group-merge input-group-borderless input-group-hover-light navbar-input-group">
-                                    <div class="input-group-prepend input-group-text">
-                                        <i class="bi-search"></i>
-                                    </div>
+<!-- ========== LEFT SIDEBAR ========== -->
+<style>
+    /* ── Sidebar shell ── */
+    #appSidebar {
+        position: fixed;
+        top: 0; left: 0;
+        width: 220px;
+        height: 100vh;
+        background: #111827;
+        display: flex;
+        flex-direction: column;
+        z-index: 1040;
+        transition: width .25s ease, transform .25s ease;
+        overflow: hidden;
+    }
+    #appSidebar.collapsed { width: 72px; }
 
-                                    <input type="search" class="js-form-search form-control global-search"
-                                           placeholder="@lang("Search for a menu")"
-                                           aria-label="@lang("Search for a menu")" data-hs-form-search-options='{
-                                               "clearIcon": "#clearSearchResultsIcon",
-                                               "dropMenuElement": "#searchDropdownMenu",
-                                               "dropMenuOffset": 20,
-                                               "toggleIconOnFocus": true,
-                                               "activeClass": "focus"
-                                             }'>
-                                    <a class="input-group-append input-group-text" href="javascript:void(0)">
-                                        <i id="clearSearchResultsIcon" class="bi-x-lg d-none"></i>
-                                    </a>
-                                </div>
-                            </div>
+    /* ── Push main content ── */
+    body { margin-left: 220px; transition: margin-left .25s ease; }
+    body.sidebar-collapsed { margin-left: 72px; }
 
-                            <button
-                                class="js-form-search js-form-search-mobile-toggle btn btn-ghost-secondary btn-icon rounded-circle d-lg-none"
-                                type="button" data-hs-form-search-options='{
-                                   "clearIcon": "#clearSearchResultsIcon",
-                                   "dropMenuElement": "#searchDropdownMenu",
-                                   "dropMenuOffset": 20,
-                                   "toggleIconOnFocus": true,
-                                   "activeClass": "focus"
-                                 }'>
-                                <i class="bi-search"></i>
-                            </button>
-                            <!-- End Input Group -->
+    /* ── Logo row ── */
+    .sb-logo-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 14px 14px;
+        border-bottom: 1px solid rgba(255,255,255,.07);
+        flex-shrink: 0;
+    }
+    .sb-logo-row img { height: 32px; object-fit: contain; max-width: 130px; }
+    .sb-logo-row .logo-icon { height: 32px; width: 32px; object-fit: contain; display: none; }
+    #appSidebar.collapsed .sb-logo-row img.logo-full  { display: none; }
+    #appSidebar.collapsed .sb-logo-row .logo-icon     { display: block; }
 
-                            <!-- Card Search Content -->
-                            <div id="searchDropdownMenu"
-                                 class="hs-form-search-menu-content dropdown-menu dropdown-menu-form-search navbar-dropdown-menu-borderless">
-                                <div class="card">
-                                    <!-- Body -->
-                                    <div class="card-body-height search-result">
-                                        <div class="d-lg-none">
-                                            <div class="input-group input-group-merge navbar-input-group mb-5">
-                                                <div class="input-group-prepend input-group-text">
-                                                    <i class="bi-search"></i>
-                                                </div>
+    .sb-toggle {
+        background: none; border: none; cursor: pointer;
+        color: #9ca3af; padding: 4px; border-radius: 6px;
+        display: flex; align-items: center; justify-content: center;
+        transition: background .15s, color .15s;
+        flex-shrink: 0;
+    }
+    .sb-toggle:hover { background: rgba(255,255,255,.08); color: #fff; }
+    .sb-toggle svg { width: 18px; height: 18px; }
 
-                                                <input type="search" class="form-control global-search"
-                                                       placeholder="@lang("Search for a menu")"
-                                                       aria-label="@lang("Search for a menu")">
-                                                <a class="input-group-append input-group-text"
-                                                   href="javascript:void(0);">
-                                                    <i class="bi-x-lg"></i>
-                                                </a>
-                                            </div>
+    /* ── Utility bar (top-right area things) ── */
+    .sb-utility {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 10px 12px;
+        border-bottom: 1px solid rgba(255,255,255,.07);
+        flex-shrink: 0;
+    }
+    #appSidebar.collapsed .sb-utility { justify-content: center; flex-wrap: wrap; gap: 4px; padding: 8px 6px; }
+
+    .sb-util-btn {
+        position: relative;
+        background: none; border: none; cursor: pointer;
+        color: #9ca3af; padding: 7px;
+        border-radius: 8px;
+        display: flex; align-items: center; justify-content: center;
+        transition: background .15s, color .15s;
+    }
+    .sb-util-btn:hover { background: rgba(255,255,255,.08); color: #fff; }
+    .sb-util-btn svg, .sb-util-btn i { font-size: 1rem; }
+    .sb-util-label {
+        font-size: 0.75rem; color: #d1d5db;
+        white-space: nowrap; overflow: hidden;
+        transition: opacity .2s;
+    }
+    #appSidebar.collapsed .sb-util-label { display: none; }
+
+    .sb-badge {
+        position: absolute; top: 4px; right: 4px;
+        width: 8px; height: 8px; border-radius: 50%;
+        background: #ef4444; border: 2px solid #111827;
+    }
+
+    /* ── Scrollable nav area ── */
+    .sb-nav {
+        flex: 1; overflow-y: auto; overflow-x: hidden;
+        padding: 10px 10px 6px;
+    }
+    .sb-nav::-webkit-scrollbar { width: 4px; }
+    .sb-nav::-webkit-scrollbar-track { background: transparent; }
+    .sb-nav::-webkit-scrollbar-thumb { background: rgba(255,255,255,.12); border-radius: 4px; }
+
+    /* ── 2-column tile grid ── */
+    .sb-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+    }
+    #appSidebar.collapsed .sb-grid { grid-template-columns: 1fr; }
+
+    .sb-tile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding: 12px 6px 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #9ca3af;
+        background: rgba(255,255,255,.03);
+        border: 1px solid rgba(255,255,255,.05);
+        transition: background .15s, color .15s, border-color .15s, transform .12s;
+        cursor: pointer;
+        min-height: 68px;
+    }
+    .sb-tile:hover {
+        background: rgba(255,255,255,.08);
+        color: #f3f4f6;
+        border-color: rgba(255,255,255,.12);
+        transform: translateY(-1px);
+        text-decoration: none;
+    }
+    .sb-tile.active {
+        background: linear-gradient(135deg, #7c3aed, #6d28d9);
+        color: #fff;
+        border-color: #7c3aed;
+        box-shadow: 0 4px 14px rgba(124,58,237,.4);
+    }
+    .sb-tile i, .sb-tile .bi {
+        font-size: 1.25rem;
+        line-height: 1;
+    }
+    .sb-tile-label {
+        font-size: 0.65rem;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.2;
+        letter-spacing: .01em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+    #appSidebar.collapsed .sb-tile { min-height: 48px; padding: 10px 6px; }
+    #appSidebar.collapsed .sb-tile-label { display: none; }
+
+    /* Section label */
+    .sb-section-label {
+        font-size: 0.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+        color: #4b5563;
+        padding: 10px 4px 4px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    #appSidebar.collapsed .sb-section-label { opacity: 0; height: 0; padding: 0; }
+
+    /* ── User profile footer ── */
+    .sb-footer {
+        border-top: 1px solid rgba(255,255,255,.07);
+        padding: 10px 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        position: relative;
+    }
+    #appSidebar.collapsed .sb-footer { justify-content: center; }
+    .sb-avatar {
+        width: 34px; height: 34px; border-radius: 50%;
+        object-fit: cover; border: 2px solid #374151;
+        flex-shrink: 0;
+    }
+    .sb-user-info { overflow: hidden; flex: 1; }
+    .sb-user-info .name {
+        font-size: 0.75rem; font-weight: 600; color: #f3f4f6;
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .sb-user-info .email {
+        font-size: 0.65rem; color: #6b7280;
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    #appSidebar.collapsed .sb-user-info { display: none; }
+    .sb-signout {
+        background: none; border: none; cursor: pointer;
+        color: #6b7280; padding: 4px;
+        border-radius: 6px; display: flex;
+        transition: color .15s;
+    }
+    .sb-signout:hover { color: #ef4444; }
+    #appSidebar.collapsed .sb-signout { display: none; }
+
+    /* ── Dropdown menus inside sidebar ── */
+    .sb-dropdown { position: relative; }
+    .sb-dropdown-menu {
+        display: none;
+        position: absolute;
+        left: calc(100% + 8px);
+        top: 0;
+        background: #1f2937;
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 10px;
+        min-width: 170px;
+        padding: 6px;
+        z-index: 1050;
+        box-shadow: 0 8px 30px rgba(0,0,0,.5);
+    }
+    .sb-dropdown-menu.show { display: block; }
+    #appSidebar:not(.collapsed) .sb-dropdown { display: contents; }
+    #appSidebar:not(.collapsed) .sb-dropdown-menu {
+        position: static; display: block !important;
+        background: transparent; border: none;
+        box-shadow: none; padding: 0;
+        margin-top: 2px; left: auto; top: auto;
+    }
+    #appSidebar:not(.collapsed) .sb-dropdown-menu { display: block; }
+
+    .sb-sub-tile {
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        gap: 4px; padding: 8px 4px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #9ca3af;
+        background: rgba(255,255,255,.02);
+        border: 1px solid rgba(255,255,255,.04);
+        transition: background .15s, color .15s;
+        font-size: 0.62rem; font-weight: 600;
+        text-align: center; min-height: 52px;
+    }
+    .sb-sub-tile:hover { background: rgba(255,255,255,.07); color: #f3f4f6; text-decoration: none; }
+    .sb-sub-tile.active { background: rgba(124,58,237,.25); color: #a78bfa; border-color: rgba(124,58,237,.3); }
+    .sb-sub-tile i { font-size: 0.9rem; }
+
+    /* ── Mobile overlay toggle ── */
+    #sidebarMobileToggle {
+        display: none;
+        position: fixed; top: 12px; left: 12px; z-index: 1050;
+        background: #111827; color: #fff;
+        border: none; border-radius: 8px; padding: 8px;
+        cursor: pointer;
+    }
+    @media (max-width: 991px) {
+        body { margin-left: 0 !important; }
+        #appSidebar { transform: translateX(-100%); width: 220px !important; }
+        #appSidebar.mobile-open { transform: translateX(0); }
+        #sidebarMobileToggle { display: flex; }
+        .sb-overlay {
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,.5); z-index: 1039;
+        }
+        .sb-overlay.show { display: block; }
+    }
+</style>
+
+<!-- Mobile toggle btn -->
+<button id="sidebarMobileToggle" onclick="toggleMobileSidebar()">
+    <i class="bi-list" style="font-size:1.2rem;"></i>
+</button>
+<div class="sb-overlay" id="sbOverlay" onclick="toggleMobileSidebar()"></div>
+
+<aside id="appSidebar">
+
+    <!-- Logo -->
+    <div class="sb-logo-row">
+        <a href="{{ route('page','/') }}">
+            <img class="logo-full"
+                 src="{{ getFile(basicControl()->admin_dark_mode_logo_driver, basicControl()->admin_dark_mode_logo) }}"
+                 alt="Logo">
+            <img class="logo-icon"
+                 src="{{ getFile(basicControl()->admin_dark_mode_logo_driver, basicControl()->admin_dark_mode_logo) }}"
+                 alt="Logo">
+        </a>
+        <button class="sb-toggle" onclick="toggleSidebar()" title="Toggle sidebar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+                <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Utility: messages, notifications, language -->
+    <div class="sb-utility">
+        {{-- Messages --}}
+        <div id="messageNotificationArea">
+            <button class="sb-util-btn" data-bs-toggle="dropdown" id="sbMsgBtn" title="Messages">
+                <i class="bi-chat-dots"></i>
+                <span class="sb-badge" v-if="items.length > 0" v-cloak></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end dropdown-card navbar-dropdown-menu navbar-dropdown-menu-borderless"
+                 aria-labelledby="sbMsgBtn" style="width:25rem; left:100%; top:0; position:absolute;">
+                <div class="card">
+                    <div class="card-header"><h4 class="card-title mb-0">@lang('Messages')</h4></div>
+                    <div class="card-body card-body-height">
+                        <ul class="list-group list-group-flush navbar-card-list-group" v-if="items.length > 0">
+                            <li class="list-group-item" v-for="(item,index) in items" :key="index">
+                                <a href="javascript:void(0);" @click.prevent="readAt(item.id,item.link)">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img class="avatar avatar-xs avatar-4x3" :src="item.sender.user_image" alt="">
                                         </div>
-
-                                        <span class="dropdown-header">@lang("Result")</span>
-
-                                        <div class="dropdown-divider"></div>
-
-                                        <div class="content">
-
-
+                                        <div class="flex-grow-1 text-truncate ms-3">
+                                            <h5 class="mb-0">@{{ item.sender.fullname }}</h5>
+                                            <p class="card-text text-body">@{{ item.message }}</p>
+                                            <small class="text-muted">@{{ item.time }}</small>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- End Search Form -->
-                </div>
-                <!-- End Content Start -->
-
-                <!-- Content End -->
-                <div class="navbar-nav-wrap-content-end">
-                    <!-- Navbar -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item d-none d-sm-inline-block" id="messageNotificationArea">
-                            <div class="dropdown">
-                                <button type="button" class="btn btn-icon btn-ghost-secondary rounded-circle"
-                                        id="navbarMessagesDropdown"
-                                        data-bs-toggle="dropdown" aria-expanded="false" data-bs-dropdown-animation>
-                                    <i class="bi-chat-dots"></i>
-                                    <span class="btn-status btn-sm-status btn-status-danger" v-if="items.length > 0"
-                                          v-cloak></span>
-                                </button>
-
-                                <div
-                                    class="dropdown-menu dropdown-menu-end dropdown-card navbar-dropdown-menu navbar-dropdown-menu-borderless"
-                                    aria-labelledby="navbarMessagesDropdown" style="width: 25rem;">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h4 class="card-title mb-0">@lang('Messages')</h4>
-                                        </div>
-
-                                        <div class="card-body card-body-height">
-                                            <ul class="list-group list-group-flush navbar-card-list-group"
-                                                v-if="items.length > 0">
-                                                <li class="list-group-item" v-for="(item, index) in items" :key="index">
-                                                    <a href="javascript:void(0);"
-                                                       @click.prevent="readAt(item.id, item.link)">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="flex-shrink-0">
-                                                                <img class="avatar avatar-xs avatar-4x3"
-                                                                     :src="item.sender.user_image" alt="User">
-                                                            </div>
-                                                            <div class="flex-grow-1 text-truncate ms-3">
-                                                                <h5 class="mb-0">@{{ item.sender.fullname }}</h5>
-                                                                <p class="card-text text-body">@{{ item.message }}</p>
-                                                                <small class="text-muted">@{{ item.time }}</small>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-
-                                            <div class="text-center p-4" v-else>
-                                                <img class="mb-3 dataTables-image"
-                                                     src="{{ asset('assets/admin/img/oc-error.svg') }}" alt="">
-                                                <p class="mb-0">@lang("No Messages Found")</p>
-                                            </div>
-                                        </div>
-
-                                        <a class="card-footer text-center" href="javascript:void(0);"
-                                           @click.prevent="readAll" v-if="items.length > 0">
-                                            @lang("Clear all messages") <i class="bi-chevron-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        @if(basicControl()->in_app_notification)
-                            <li class="nav-item d- d-sm-inline-block" id="pushNotificationArea">
-                                <div class="dropdown">
-                                    <button type="button" class="btn btn-ghost-secondary btn-icon rounded-circle"
-                                            id="navbarNotificationsDropdown" data-bs-toggle="dropdown"
-                                            aria-expanded="false"
-                                            data-bs-auto-close="outside">
-                                        <i class="bi-bell"></i>
-                                        <span class="btn-status btn-sm-status btn-status-danger" v-if="items.length > 0"
-                                              v-cloak></span>
-                                    </button>
-                                    <div
-                                        class="dropdown-menu dropdown-menu-end dropdown-card navbar-dropdown-menu navbar-dropdown-menu-borderless navbarNotificationsDropdown data-bs-dropdown-animation"
-                                        aria-labelledby="navbarNotificationsDropdown">
-                                        <div class="card ">
-                                            <div class="card-header card-header-content-between">
-                                                <h4 class="card-title mb-0">@lang('Notifications')</h4>
-                                            </div>
-                                            <div class="card-body-height">
-                                                <div id="notificationTabContent">
-                                                    <ul class="list-group list-group-flush navbar-card-list-group"
-                                                        v-if="items.length > 0">
-                                                        <li class="list-group-item form-check-select"
-                                                            v-for="(item, index) in items" :key="index">
-                                                            <div class="row">
-                                                                <div class="col-auto">
-                                                                    <div class="d-flex align-items-center">
-                                                                        <div class="form-check">
-                                                                            <input class="form-check-input"
-                                                                                   type="checkbox"
-                                                                                   :id="'notificationCheck' + index">
-                                                                            <label class="form-check-label"
-                                                                                   :for="'notificationCheck' + index"></label>
-                                                                            <span
-                                                                                class="form-check-stretched-bg"></span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col ms-n2">
-                                                                    <h5 class="mb-1">@{{ item.description.name }}</h5>
-                                                                    <p class="text-body fs-5">@{{ item.description.text }}</p>
-                                                                    <small class="col-auto text-muted text-cap">@{{
-                                                                        item.formatted_date }}</small>
-                                                                </div>
-                                                            </div>
-                                                            <a class="stretched-link" :href="item.description.link"></a>
-                                                        </li>
-                                                    </ul>
-
-                                                    <!-- No Notifications Found -->
-                                                    <div class="text-center p-4" v-else>
-                                                        <img class="dataTables-image mb-3"
-                                                             src="{{ asset('assets/admin/img/oc-error.svg') }}"
-                                                             alt="Image Description" data-hs-theme-appearance="default">
-                                                        <img class="dataTables-image mb-3"
-                                                             src="{{ asset('assets/admin/img/oc-error-light.svg') }}"
-                                                             alt="Image Description" data-hs-theme-appearance="dark">
-                                                        <p class="mb-0">@lang("No Notifications Found")</p>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                            <a class="card-footer text-center" href="javascript:void(0)"
-                                               v-if="items.length > 0"
-                                               @click.prevent="readAll">
-                                                @lang("Clear all notifications") <i class="bi-chevron-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        @endif
-
-                        <li class="nav-item">
-                            <!-- Account -->
-                            <div class="dropdown">
-                                <a class="navbar-dropdown-account-wrapper" href="javascript:;"
-                                   id="accountNavbarDropdown" data-bs-toggle="dropdown" aria-expanded="false"
-                                   data-bs-auto-close="outside" data-bs-dropdown-animation>
-                                    <div class="avatar avatar-sm avatar-circle">
-                                        <img class="avatar-img"
-                                             src="{{ getFile(auth()->user()->image_driver, auth()->user()->image) }}"
-                                             alt="Image Description">
-                                        <span class="avatar-status avatar-sm-status avatar-status-success"></span>
                                     </div>
                                 </a>
-
-                                <div
-                                    class="dropdown-menu dropdown-menu-end navbar-dropdown-menu navbar-dropdown-menu-borderless navbar-dropdown-account"
-                                    aria-labelledby="accountNavbarDropdown" style="width: 16rem;">
-                                    <div class="dropdown-item-text">
-                                        <div class="d-flex align-items-center">
-                                            <div class="avatar avatar-sm avatar-circle">
-                                                <img class="avatar-img"
-                                                     src="{{ getFile(auth()->user()->image_driver, auth()->user()->image) }}"
-                                                     alt="Image Description">
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <h5 class="mb-0">{{ auth()->user()->firstname.' '.auth()->user()->lastname }}</h5>
-                                                <p class="card-text text-body">{{ auth()->user()->email }}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="dropdown-divider"></div>
-
-                                    <a class="dropdown-item" href="{{ route('user.profile') }}"><i
-                                            class="fal fa-user pe-2"></i>@lang('Profile & account')</a>
-                                    <a class="dropdown-item" href="{{ route('user.notification.permission.list') }}"><i
-                                            class="fal fa-bell pe-2"></i>@lang('Notification Permissions')</a>
-                                    @if(auth()->user()->role == 1)
-                                        <a class="dropdown-item" href="#"
-                                           data-bs-target="#renewPlan"
-                                           data-bs-toggle="modal"
-                                        >
-                                            <i class="fal fa-refresh pe-2"></i>@lang('Auto Renew Plan')
-                                        </a>
-                                    @endif
-
-
-                                    <a class="dropdown-item" href="{{ route('user.twostep.security') }}"><i
-                                            class="fal fa-shield pe-2"></i>@lang('2FA Verification')</a>
-                                    <a class="dropdown-item" href="#" onclick="showPwa()"> <i
-                                            class="fal fa-download pe-1"></i> @lang('Install PWA') </a>
-
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
-                                            class="fal fa-sign-out pe-2"></i>@lang('Sign out')</a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <!-- Toggler -->
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#navbarDoubleLineContainerNavDropdown"
-                                    aria-controls="navbarDoubleLineContainerNavDropdown" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                 <span class="navbar-toggler-default">
-                                   <i class="bi-list"></i>
-                                 </span>
-                                <span class="navbar-toggler-toggled"><i class="bi-x"></i></span>
-                            </button>
-                            <!-- End Toggler -->
-                        </li>
-                    </ul>
-                    <!-- End Navbar -->
+                            </li>
+                        </ul>
+                        <div class="text-center p-4" v-else>
+                            <img class="mb-3 dataTables-image" src="{{ asset('assets/admin/img/oc-error.svg') }}" alt="">
+                            <p class="mb-0">@lang("No Messages Found")</p>
+                        </div>
+                    </div>
+                    <a class="card-footer text-center" href="javascript:void(0);" @click.prevent="readAll" v-if="items.length > 0">
+                        @lang("Clear all messages") <i class="bi-chevron-right"></i>
+                    </a>
                 </div>
-                <!-- End Content End -->
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <nav class="js-mega-menu flex-grow-1">
-            <!-- Collapse -->
-            <div class="collapse navbar-collapse" id="navbarDoubleLineContainerNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a id="dashboardsMegaMenu" class="nav-link {{ menuActive(['user.dashboard']) }}"
-                           href="{{ route('user.dashboard') }}" data-title="Dashboard">
-                            <i class="bi-house-door"></i> @lang('Dashboards')
-                        </a>
-                    </li>
-                    @if(auth()->user()->role == 1)
-                        <li class="nav-item">
-                            <a class="nav-link {{ menuActive(['user.all.guides','user.guide.edit','user.guide.add','user.payment.gateway.manage']) }}"
-                               href="{{ route('user.all.guides') }}" data-title="Manage Team">
-                                <i class="bi-people dropdown-item-icon"></i>@lang('Manage Team')
-                            </a>
-                        </li>
-                        <li class="hs-has-sub-menu nav-item">
-                            <a id="pagesMegaMenu"
-                               class="hs-mega-menu-invoker nav-link dropdown-toggle {{ menuActive(['user.all.package','user.package.add','user.package.edit','user.package.seo']) }}"
-                               href="{{ route('user.all.package') }}" role="button" data-title="Packages">
-                                <i class="bi-box dropdown-item-icon"></i> @lang('Packages')
-                            </a>
-                            <div class="hs-sub-menu dropdown-menu navbar-dropdown-menu-borderless"
-                                 aria-labelledby="pagesMegaMenu" style="min-width: 14rem;">
-                                <a class="hs-mega-menu-invoker dropdown-item {{ menuActive(['user.all.package','user.package.edit','user.package.seo']) }}"
-                                   href="{{ route('user.all.package') }}" data-title="List"><i
-                                        class="bi bi-list pe-1"></i>@lang('List')</a>
-                                <a class="hs-mega-menu-invoker dropdown-item {{ menuActive(['user.package.add']) }}"
-                                   href="{{ route('user.package.add') }}" data-title="Add"><i
-                                        class="bi bi-plus-circle pe-1"></i>@lang('Add')</a>
-                                <a class="hs-mega-menu-invoker dropdown-item {{ menuActive(['user.review.list']) }}"
-                                   href="{{ route('user.review.list') }}" data-title="Reviews"><i
-                                        class="bi bi-journal-check pe-1"></i>@lang('Reviews')</a>
-                                <a class="hs-mega-menu-invoker dropdown-item {{ menuActive(['user.chat.list']) }}"
-                                   href="{{ route('user.chat.list') }}" data-title="Chats"><i
-                                        class="bi bi-chat pe-1"></i>@lang('Chats')</a>
+        {{-- Notifications --}}
+        @if(basicControl()->in_app_notification)
+            <div id="pushNotificationArea">
+                <button class="sb-util-btn" data-bs-toggle="dropdown" id="sbNotiBtn" title="Notifications">
+                    <i class="bi-bell"></i>
+                    <span class="sb-badge" v-if="items.length > 0" v-cloak></span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end dropdown-card navbar-dropdown-menu navbar-dropdown-menu-borderless"
+                     aria-labelledby="sbNotiBtn">
+                    <div class="card">
+                        <div class="card-header card-header-content-between">
+                            <h4 class="card-title mb-0">@lang('Notifications')</h4>
+                        </div>
+                        <div class="card-body-height">
+                            <ul class="list-group list-group-flush navbar-card-list-group" v-if="items.length > 0">
+                                <li class="list-group-item form-check-select" v-for="(item,index) in items" :key="index">
+                                    <div class="row">
+                                        <div class="col ms-n2">
+                                            <h5 class="mb-1">@{{ item.description.name }}</h5>
+                                            <p class="text-body fs-5">@{{ item.description.text }}</p>
+                                            <small class="col-auto text-muted text-cap">@{{ item.formatted_date }}</small>
+                                        </div>
+                                    </div>
+                                    <a class="stretched-link" :href="item.description.link"></a>
+                                </li>
+                            </ul>
+                            <div class="text-center p-4" v-else>
+                                <img class="dataTables-image mb-3" src="{{ asset('assets/admin/img/oc-error.svg') }}" alt="">
+                                <p class="mb-0">@lang("No Notifications Found")</p>
                             </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {{ menuActive(['user.vendor.booking.list','user.view.booking']) }}"
-                               href="{{ route('user.vendor.booking.list') }}" data-title="Tour History">
-                                <i class="bi-clock-history dropdown-item-icon"></i>@lang('Tour History')
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link {{ menuActive(['user.payment.gateway.index','user.payment.gateway.delete','user.payment.gateway.edit']) }}"
-                               href="{{ route('user.payment.gateway.index') }}" data-title="Manage Gateway">
-                                <i class="bi-credit-card dropdown-item-icon"></i>@lang('Manage Gateway')
-                            </a>
-                        </li>
-                    @endif
-
-                    @if(auth()->user()->role == 0)
-                        <li class="nav-item">
-                            <a class="nav-link {{ menuActive(['user.booking.list']) }}"
-                               href="{{ route('user.booking.list') }}" data-title="Tour History">
-                                <i class="bi-clock-history dropdown-item-icon"></i>@lang('Tour History')
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {{ menuActive(['user.chat.list']) }}"
-                               href="{{ route('user.chat.list') }}" data-title="Chat Lists">
-                                <i class="bi-chat dropdown-item-icon"></i>@lang('Chats')
-                            </a>
-                        </li>
-                    @endif
-
-                    <li class="nav-item">
-                        <a class="nav-link {{ menuActive(['user.fund.index']) }}" href="{{ route('user.fund.index') }}"
-                           data-placement="left" data-title="Payment History">
-                            <i class="bi-receipt dropdown-item-icon"></i>@lang('Payment History')
+                        </div>
+                        <a class="card-footer text-center" href="javascript:void(0)" v-if="items.length > 0" @click.prevent="readAll">
+                            @lang("Clear all notifications") <i class="bi-chevron-right"></i>
                         </a>
-                    </li>
-                    @if(auth()->user()->role == 1)
-                        @if(isPayoutAccess())
-                            <li class="hs-has-sub-menu nav-item">
-                                <a id="payoutsMenu"
-                                   class="hs-mega-menu-invoker nav-link dropdown-toggle {{ menuActive(['user.payout.index','user.payout']) }}"
-                                   href="{{ route('user.payout.index') }}" role="button" data-title="Payouts">
-                                    <i class="bi-wallet2 dropdown-item-icon"></i> @lang('Payouts')</a>
-                                <div class="hs-sub-menu dropdown-menu navbar-dropdown-menu-borderless"
-                                     aria-labelledby="payoutsMenu" style="min-width: 14rem;">
-                                    <a class="hs-mega-menu-invoker dropdown-item {{ menuActive(['user.payout']) }}"
-                                       href="{{ route('user.payout') }}" data-title="Make Payout"><i
-                                            class="bi-box-arrow-up-right pe-2"></i>@lang('Make Payout')</a>
-                                    <a class="hs-mega-menu-invoker dropdown-item {{ menuActive(['user.payout.index']) }}"
-                                       href="{{ route('user.payout.index') }}" data-title="Payouts History"><i
-                                            class="bi-file-earmark-text pe-2"></i>@lang('History')</a>
-                                </div>
-                            </li>
-                        @endif
-                    @endif
-                    <li class="nav-item">
-                        <a class="nav-link {{ menuActive(['user.transaction']) }}"
-                           href="{{ route('user.transaction') }}" data-placement="left" data-title="Transactions">
-                            <i class="fal fa-money-bill dropdown-item-icon"></i>@lang('Transactions')
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ menuActive(['user.ticket.list','user.ticket.view']) }}"
-                           href="{{ route('user.ticket.list') }}" data-placement="left" data-title="Support Ticket">
-                            <i class="bi-ticket dropdown-item-icon"></i>@lang('Support Ticket')
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ menuActive(['user.kyc.settings']) }}"
-                           href="{{ route('user.kyc.settings') }}" data-placement="left" data-title="KYC Settings">
-                            <i class="bi-person-badge dropdown-item-icon"></i>@lang('KYC Settings')
-                        </a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
-        </nav>
-    </div>
-</header>
+        @endif
 
+        <span class="sb-util-label ms-auto text-truncate" style="max-width:90px;">
+            {{ auth()->user()->firstname }}
+        </span>
+    </div>
+
+    <!-- Navigation tiles -->
+    <div class="sb-nav">
+
+        <div class="sb-section-label">@lang('Navigation')</div>
+
+        <div class="sb-grid">
+
+            {{-- Dashboard --}}
+            <a href="{{ route('user.dashboard') }}"
+               class="sb-tile {{ request()->routeIs('user.dashboard') ? 'active' : '' }}">
+                <i class="bi-house-door"></i>
+                <span class="sb-tile-label">@lang('Dashboards')</span>
+            </a>
+
+            {{-- Payment History --}}
+            <a href="{{ route('user.fund.index') }}"
+               class="sb-tile {{ request()->routeIs('user.fund.index') ? 'active' : '' }}">
+                <i class="bi-receipt"></i>
+                <span class="sb-tile-label">@lang('Payment History')</span>
+            </a>
+
+            {{-- Transactions --}}
+            <a href="{{ route('user.transaction') }}"
+               class="sb-tile {{ request()->routeIs('user.transaction') ? 'active' : '' }}">
+                <i class="fal fa-money-bill"></i>
+                <span class="sb-tile-label">@lang('Transactions')</span>
+            </a>
+
+            {{-- Support Ticket --}}
+            <a href="{{ route('user.ticket.list') }}"
+               class="sb-tile {{ request()->routeIs('user.ticket.list','user.ticket.view') ? 'active' : '' }}">
+                <i class="bi-ticket"></i>
+                <span class="sb-tile-label">@lang('Support Ticket')</span>
+            </a>
+
+            {{-- KYC --}}
+            <a href="{{ route('user.kyc.settings') }}"
+               class="sb-tile {{ request()->routeIs('user.kyc.settings') ? 'active' : '' }}">
+                <i class="bi-person-badge"></i>
+                <span class="sb-tile-label">@lang('KYC Settings')</span>
+            </a>
+
+            {{-- Chats (customer role) --}}
+            @if(auth()->user()->role == 0)
+                <a href="{{ route('user.booking.list') }}"
+                   class="sb-tile {{ request()->routeIs('user.booking.list') ? 'active' : '' }}">
+                    <i class="bi-clock-history"></i>
+                    <span class="sb-tile-label">@lang('Tour History')</span>
+                </a>
+                <a href="{{ route('user.chat.list') }}"
+                   class="sb-tile {{ request()->routeIs('user.chat.list') ? 'active' : '' }}">
+                    <i class="bi-chat"></i>
+                    <span class="sb-tile-label">@lang('Chats')</span>
+                </a>
+            @endif
+
+            {{-- Vendor-only items --}}
+            @if(auth()->user()->role == 1)
+
+                <a href="{{ route('user.all.guides') }}"
+                   class="sb-tile {{ request()->routeIs('user.all.guides','user.guide.edit','user.guide.add') ? 'active' : '' }}">
+                    <i class="bi-people"></i>
+                    <span class="sb-tile-label">@lang('Manage Team')</span>
+                </a>
+
+                <a href="{{ route('user.vendor.booking.list') }}"
+                   class="sb-tile {{ request()->routeIs('user.vendor.booking.list','user.view.booking') ? 'active' : '' }}">
+                    <i class="bi-clock-history"></i>
+                    <span class="sb-tile-label">@lang('Tour History')</span>
+                </a>
+
+                <a href="{{ route('user.payment.gateway.index') }}"
+                   class="sb-tile {{ request()->routeIs('user.payment.gateway.index','user.payment.gateway.edit','user.payment.gateway.delete') ? 'active' : '' }}">
+                    <i class="bi-credit-card"></i>
+                    <span class="sb-tile-label">@lang('Manage Gateway')</span>
+                </a>
+
+                @if(isPayoutAccess())
+                    <a href="{{ route('user.payout') }}"
+                       class="sb-tile {{ request()->routeIs('user.payout','user.payout.index') ? 'active' : '' }}">
+                        <i class="bi-wallet2"></i>
+                        <span class="sb-tile-label">@lang('Payouts')</span>
+                    </a>
+                @endif
+
+            @endif
+        </div>
+
+        {{-- Packages sub-section (vendor only) --}}
+        @if(auth()->user()->role == 1)
+            <div class="sb-section-label mt-2">@lang('Packages')</div>
+            <div class="sb-grid">
+                <a href="{{ route('user.all.package') }}"
+                   class="sb-sub-tile {{ request()->routeIs('user.all.package','user.package.edit','user.package.seo') ? 'active' : '' }}">
+                    <i class="bi bi-list"></i>
+                    <span>@lang('List')</span>
+                </a>
+                <a href="{{ route('user.package.add') }}"
+                   class="sb-sub-tile {{ request()->routeIs('user.package.add') ? 'active' : '' }}">
+                    <i class="bi bi-plus-circle"></i>
+                    <span>@lang('Add')</span>
+                </a>
+                <a href="{{ route('user.review.list') }}"
+                   class="sb-sub-tile {{ request()->routeIs('user.review.list') ? 'active' : '' }}">
+                    <i class="bi bi-journal-check"></i>
+                    <span>@lang('Reviews')</span>
+                </a>
+                <a href="{{ route('user.chat.list') }}"
+                   class="sb-sub-tile {{ request()->routeIs('user.chat.list') ? 'active' : '' }}">
+                    <i class="bi bi-chat"></i>
+                    <span>@lang('Chats')</span>
+                </a>
+            </div>
+        @endif
+
+    </div>
+
+    <!-- Footer: user profile -->
+    <div class="sb-footer">
+        <div class="dropdown dropup w-100">
+            <a href="javascript:;" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+               style="display:flex; align-items:center; gap:10px; text-decoration:none;">
+                <img class="sb-avatar"
+                     src="{{ getFile(auth()->user()->image_driver, auth()->user()->image) }}" alt="">
+                <div class="sb-user-info">
+                    <div class="name">{{ auth()->user()->firstname.' '.auth()->user()->lastname }}</div>
+                    <div class="email">{{ auth()->user()->email }}</div>
+                </div>
+                <button class="sb-signout" title="More">
+                    <i class="bi-three-dots-vertical" style="font-size:.85rem;"></i>
+                </button>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end navbar-dropdown-menu navbar-dropdown-menu-borderless"
+                 style="width:14rem; margin-bottom:8px;">
+                <a class="dropdown-item" href="{{ route('user.profile') }}">
+                    <i class="fal fa-user pe-2"></i>@lang('Profile & account')
+                </a>
+                <a class="dropdown-item" href="{{ route('user.notification.permission.list') }}">
+                    <i class="fal fa-bell pe-2"></i>@lang('Notification Permissions')
+                </a>
+                @if(auth()->user()->role == 1)
+                    <a class="dropdown-item" href="#" data-bs-target="#renewPlan" data-bs-toggle="modal">
+                        <i class="fal fa-refresh pe-2"></i>@lang('Auto Renew Plan')
+                    </a>
+                @endif
+                <a class="dropdown-item" href="{{ route('user.twostep.security') }}">
+                    <i class="fal fa-shield pe-2"></i>@lang('2FA Verification')
+                </a>
+                <a class="dropdown-item" href="#" onclick="showPwa()">
+                    <i class="fal fa-download pe-1"></i> @lang('Install PWA')
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-danger"
+                   href="{{ route('logout') }}"
+                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="fal fa-sign-out pe-2"></i>@lang('Sign out')
+                </a>
+            </div>
+        </div>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf</form>
+    </div>
+</aside>
+
+<!-- Auto-Renew Plan Modal -->
 <div class="modal fade" id="renewPlan" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-close">
-                <button type="button" class="btn btn-ghost-secondary btn-icon btn-sm" data-bs-dismiss="modal"
-                        aria-label="Close">
+                <button type="button" class="btn btn-ghost-secondary btn-icon btn-sm" data-bs-dismiss="modal" aria-label="Close">
                     <i class="bi-x-lg"></i>
                 </button>
             </div>
@@ -444,11 +547,11 @@
                     </div>
                 </div>
                 <div class="modal-footer d-block text-center py-sm-5">
-                    <small
-                        class="text-cap text-muted">@lang('Confirm your interest to renew. The plan will automatically renew after your current one ends.')</small>
+                    <small class="text-cap text-muted">
+                        @lang('Confirm your interest to renew. The plan will automatically renew after your current one ends.')
+                    </small>
                     <div class="modal-footer-button">
-                        <button type="button" class="btn btn-white" data-bs-dismiss="modal"
-                                aria-label="Close">@lang('Cancel')</button>
+                        <button type="button" class="btn btn-white" data-bs-dismiss="modal" aria-label="Close">@lang('Cancel')</button>
                         <button type="submit" class="btn btn-success" name="confirm" value="1">@lang('Confirm')</button>
                     </div>
                 </div>
@@ -462,225 +565,85 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
+        /* ── Sidebar collapse ── */
+        function toggleSidebar() {
+            const sb   = document.getElementById('appSidebar');
+            const body = document.body;
+            sb.classList.toggle('collapsed');
+            body.classList.toggle('sidebar-collapsed');
+            localStorage.setItem('sbCollapsed', sb.classList.contains('collapsed') ? '1' : '0');
+        }
+
+        function toggleMobileSidebar() {
+            document.getElementById('appSidebar').classList.toggle('mobile-open');
+            document.getElementById('sbOverlay').classList.toggle('show');
+        }
+
+        // Restore state on load
+        (function () {
+            if (localStorage.getItem('sbCollapsed') === '1') {
+                document.getElementById('appSidebar').classList.add('collapsed');
+                document.body.classList.add('sidebar-collapsed');
+            }
+        })();
+
+        /* ── Vue: Messages ── */
         let messageNotificationArea = new Vue({
             el: "#messageNotificationArea",
-            data: {
-                items: [],
-            },
-            beforeMount() {
-                this.getMessages();
-                this.listenForMessages();
-            },
+            data: { items: [] },
+            beforeMount() { this.getMessages(); this.listenForMessages(); },
             methods: {
                 getMessages() {
-                    let app = this;
                     axios.get("{{ route('user.message.show') }}")
-                        .then(function (res) {
-                            app.items = res.data;
-                        });
+                        .then(res => { this.items = res.data; });
                 },
                 readAt(id, link) {
-                    let app = this;
                     let url = "{{ route('user.message.readAt', 0) }}".replace(/0$/, id);
-                    axios.get(url)
-                        .then(function (res) {
-                            if (res.status) {
-                                app.getMessages();
-                                if (link && link !== '#') {
-                                    window.location.href = link;
-                                }
-                            }
-                        });
+                    axios.get(url).then(res => {
+                        if (res.status) { this.getMessages(); if (link && link !== '#') window.location.href = link; }
+                    });
                 },
                 readAll() {
-                    let app = this;
                     axios.get("{{ route('user.message.readAll') }}")
-                        .then(function (res) {
-                            if (res.status) {
-                                app.items = [];
-                            }
-                        });
+                        .then(res => { if (res.status) this.items = []; });
                 },
                 listenForMessages() {
-                    let app = this;
                     Pusher.logToConsole = false;
-                    let pusher = new Pusher("{{ env('PUSHER_APP_KEY') }}", {
-                        encrypted: true,
-                        cluster: "{{ env('PUSHER_APP_CLUSTER') }}"
-                    });
+                    let pusher  = new Pusher("{{ env('PUSHER_APP_KEY') }}", { encrypted: true, cluster: "{{ env('PUSHER_APP_CLUSTER') }}" });
                     let channel = pusher.subscribe('user-messages.' + "{{ Auth::id() }}");
-
-                    channel.bind('App\\Events\\UserMessage', function (data) {
-                        console.log("hot");
-                        app.getMessages();
-                    });
-
-                    channel.bind('App\\Events\\UpdateUserMessage', function () {
-                        console.log("cit")
-                        app.getMessages();
-                    });
+                    channel.bind('App\\Events\\UserMessage', () => this.getMessages());
+                    channel.bind('App\\Events\\UpdateUserMessage', () => this.getMessages());
                 }
             }
         });
 
+        /* ── Vue: Notifications ── */
+        @if(basicControl()->in_app_notification)
         let pushNotificationArea = new Vue({
             el: "#pushNotificationArea",
-            data: {
-                items: [],
-            },
-            beforeMount() {
-                this.getNotifications();
-                this.pushNewItem();
-            },
+            data: { items: [] },
+            beforeMount() { this.getNotifications(); this.pushNewItem(); },
             methods: {
                 getNotifications() {
-                    let app = this;
                     axios.get("{{ route('user.push.notification.show') }}")
-                        .then(function (res) {
-                            app.items = res.data;
-                        })
+                        .then(res => { this.items = res.data; });
                 },
                 readAt(id, link) {
-                    let app = this;
-                    let url = "{{ route('user.push.notification.readAt', 0) }}";
-                    url = url.replace(/.$/, id);
-                    axios.get(url)
-                        .then(function (res) {
-                            if (res.status) {
-                                app.getNotifications();
-                                if (link !== '#') {
-                                    window.location.href = link
-                                }
-                            }
-                        })
+                    let url = "{{ route('user.push.notification.readAt', 0) }}".replace(/.$/, id);
+                    axios.get(url).then(res => { if (res.status) { this.getNotifications(); if (link !== '#') window.location.href = link; } });
                 },
                 readAll() {
-                    let app = this;
-                    let url = "{{ route('user.push.notification.readAll') }}";
-                    axios.get(url)
-                        .then(function (res) {
-                            if (res.status) {
-                                app.items = [];
-                            }
-                        })
+                    axios.get("{{ route('user.push.notification.readAll') }}")
+                        .then(res => { if (res.status) this.items = []; });
                 },
                 pushNewItem() {
-                    let app = this;
-                    Pusher.logToConsole = false;
-                    let pusher = new Pusher("{{ env('PUSHER_APP_KEY') }}", {
-                        encrypted: true,
-                        cluster: "{{ env('PUSHER_APP_CLUSTER') }}"
-                    });
+                    let pusher  = new Pusher("{{ env('PUSHER_APP_KEY') }}", { encrypted: true, cluster: "{{ env('PUSHER_APP_CLUSTER') }}" });
                     let channel = pusher.subscribe('user-notification.' + "{{ Auth::id() }}");
-                    channel.bind('App\\Events\\UserNotification', function (data) {
-                        app.items.unshift(data.message);
-                    });
-                    channel.bind('App\\Events\\UpdateUserNotification', function (data) {
-                        app.getNotifications();
-                    });
+                    channel.bind('App\\Events\\UserNotification', data => this.items.unshift(data.message));
+                    channel.bind('App\\Events\\UpdateUserNotification', () => this.getNotifications());
                 }
             }
         });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const searchInput = document.querySelector('.global-search');
-            const menuLinks = document.querySelectorAll('.navbar-nav .nav-link, .hs-sub-menu .dropdown-item');
-            const searchResultBox = document.querySelector('.search-result .content');
-
-            function renderResults(searchText = '') {
-                searchResultBox.innerHTML = '';
-                let found = false;
-
-                menuLinks.forEach(link => {
-                    const dataTitle = link.getAttribute('data-title') || '';
-                    const title = dataTitle.toLowerCase();
-
-                    if (title.includes(searchText)) {
-                        const newLink = document.createElement('a');
-                        newLink.href = link.href;
-                        newLink.className = 'dropdown-item';
-
-                        const wrapper = document.createElement('div');
-                        wrapper.className = 'd-flex align-items-center';
-
-                        const iconWrapper = document.createElement('div');
-                        iconWrapper.className = 'flex-shrink-0';
-                        const iconSpan = document.createElement('span');
-                        iconSpan.className = 'icon icon-soft-dark icon-xs icon-circle';
-
-                        const originalIcon = link.querySelector('i');
-                        if (originalIcon) {
-                            const clonedIcon = originalIcon.cloneNode(true);
-                            iconSpan.appendChild(clonedIcon);
-                        }
-                        iconWrapper.appendChild(iconSpan);
-
-                        const textWrapper = document.createElement('div');
-                        textWrapper.className = 'flex-grow-1 text-truncate ms-2';
-
-                        const titleSpan = document.createElement('span');
-                        titleSpan.className = 'd-block';
-                        titleSpan.innerHTML = highlightMatch(dataTitle, searchText);
-                        textWrapper.appendChild(titleSpan);
-
-                        const breadcrumb = getMenuBreadcrumb(link);
-                        if (breadcrumb) {
-                            const descSpan = document.createElement('span');
-                            descSpan.className = 'menu-description';
-                            descSpan.innerText = breadcrumb;
-                            textWrapper.appendChild(descSpan);
-                        }
-
-                        wrapper.appendChild(iconWrapper);
-                        wrapper.appendChild(textWrapper);
-                        newLink.appendChild(wrapper);
-
-                        searchResultBox.appendChild(newLink);
-                        found = true;
-                    }
-                });
-
-                if (!found) {
-                    searchResultBox.innerHTML = '<div class="text-center p-3">@lang("No Result Found")</div>';
-                }
-            }
-
-            function highlightMatch(text, search) {
-                if (!search) return text;
-                const regex = new RegExp(`(${search})`, 'gi');
-                return text.replace(regex, `<b>$1</b>`);
-            }
-
-            function getMenuBreadcrumb(link) {
-                const currentTitle = link.getAttribute('data-title') || '';
-                const parent = link.closest('.hs-sub-menu');
-
-                if (parent) {
-                    const parentToggle = parent.closest('li')?.querySelector('.nav-link[data-title]');
-                    const parentTitle = parentToggle?.getAttribute('data-title') || '';
-                    return `${parentTitle} > ${currentTitle}`;
-                }
-
-                return '';
-            }
-
-            searchInput.addEventListener('input', function () {
-                const searchText = this.value.toLowerCase().trim();
-                document.getElementById('searchDropdownMenu').classList.add('show');
-                renderResults(searchText);
-            });
-
-            searchInput.addEventListener('focus', function () {
-                document.getElementById('searchDropdownMenu').classList.add('show');
-                renderResults();
-            });
-
-            document.addEventListener('click', function (event) {
-                if (!event.target.closest('.dropdown')) {
-                    document.getElementById('searchDropdownMenu').classList.remove('show');
-                }
-            });
-        });
-
+        @endif
     </script>
 @endpush

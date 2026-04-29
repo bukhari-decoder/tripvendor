@@ -205,6 +205,7 @@ Route::group(['middleware' => ['maintenanceMode']], function () use ($basicContr
 
                     Route::post('purchase-plan', [PlanController::class, 'planSelect'])->name('purchase.planSelect');
                     Route::get('make-payment/details', [PlanController::class, 'makePaymentDetails'])->name('make.payment.details');
+                    Route::post('make-payment/ecocash', [PlanController::class, 'makeEcocashPaymentDetails'])->name('make.payment.ecocash');
                     Route::post('plan/make-payment', [PlanController::class, 'makePayment'])->name('plan.make.payment');
 
                     Route::get('package/make-featured', [UserPackageController::class, 'featuredRequest'])->name('package.featured.request');
@@ -298,7 +299,7 @@ Route::group(['middleware' => ['maintenanceMode']], function () use ($basicContr
 
     Route::match(['get', 'post'], 'payment/{code}/{trx?}/{type?}', [PaymentController::class, 'gatewayIpn'])->name('ipn');
     Route::any('subscription/{code}/{utr?}', [SubscriptionController::class, 'subscriptionIpn'])->name('subscription.ipn');
-    
+
 
     Auth::routes();
     /*= Frontend Manage Controller =*/

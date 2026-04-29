@@ -164,6 +164,7 @@ class HomeController extends Controller
 
     public function index()
     {
+
         $data['user'] = Auth::user();
         $data['firebaseNotify'] = config('firebase');
         $data['total_booking'] = $data['user']->booking()->count();

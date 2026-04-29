@@ -53,7 +53,8 @@
         "toin0u/geocoder-laravel": "^5.0",
         "twilio/sdk": "^7.7",
         "vonage/client": "^4.0",
-        "yajra/laravel-datatables": "11.0"
+        "yajra/laravel-datatables": "11.0",
+        "ext-curl": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

@@ -15,6 +15,7 @@
                             </nav>
                             <h1 class="page-header-title">@lang('Create Package')</h1>
                         </div>
+
                         @if($freeLimit <= $vendor->posted_listing)
                             @if(isset($vendor->active_plan))
                                 @if($vendor->current_plan_expiry_date <= now())
@@ -36,6 +37,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 @elseif($vendor->plan->listing_allowed <= $vendor->current_plan_posted_listing)
                                     <div class="alert alert-soft-dark" role="alert">
                                         <div class="d-flex align-items-center">

@@ -16,7 +16,7 @@ return [
 
     'user_gateway' => [
         'path' => 'gateway',
-        'size' => '300x250'
+        'size' => '3000x2500'
     ],
 
 	'ticket' => [
@@ -25,7 +25,7 @@ return [
 
 	'gateway' => [
 		'path' => 'gateway',
-		'size' => '300x250'
+		'size' => '3000x250'
 	],
 
 	'deposit' => [
